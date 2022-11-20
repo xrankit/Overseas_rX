@@ -87,7 +87,7 @@ class ARButton {
 
 			disableButton();
 
-			button.textContent = 'AR NOT SUPPORTED';
+			button.textContent = 'AR VIEW NOT SUPPORTED';
 
 		}
 

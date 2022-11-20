@@ -39,8 +39,8 @@
 
 			import * as THREE from './build/three.module.js';
 			import { ARButton } from './jsm/webxr/ARButton.js';
-			import { VRButton } from './jsm/webxr/VRButton.js';
-			//
+			//import { VRButton } from './jsm/webxr/VRButton.js';
+			
 			import { OrbitControls } from './jsm/controls/OrbitControls.js';
 			import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 			import { RGBELoader } from './jsm/loaders/RGBELoader.js';
@@ -71,10 +71,10 @@
 				isAR = true;
 			});
 
-			$("#VRButton").click(function(){
-				scene.background = envmap;
-				scene.position.z = -2;
-			});
+			// $("#VRButton").click(function(){
+			// 	scene.background = envmap;
+			// 	scene.position.z = -2;
+			// });
 
 			$("#place-button").click(function(){
 				arPlace();
@@ -156,7 +156,7 @@
 				controls.dampingFactor = 0.05;
 
 				//VR SETUP
-				document.body.appendChild(VRButton.createButton(renderer));
+				//document.body.appendChild(VRButton.createButton(renderer));
 
 				//AR SETUP
 
@@ -169,7 +169,7 @@
 
 				document.body.appendChild( ARButton.createButton(renderer, options));
 
-				//document.body.appendChild( ARButton.createButton( renderer, { requiredFeatures: [ 'hit-test' ] } ) );
+				document.body.appendChild( ARButton.createButton( renderer, { requiredFeatures: [ 'hit-test' ] } ) );
 
 				//
 
